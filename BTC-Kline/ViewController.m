@@ -27,13 +27,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    UIButton *btn = [UIButton new];
-    btn.frame = CGRectMake(0, 0, 300, 30);
-    btn.titleLabel.text = @"点我";
-    [btn addTarget:self action:@selector(present) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,12 +38,7 @@
 
     
 }
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskLandscape;
-}
 - (IBAction)present:(id)sender {
-    
     AppDelegate *appdelegate = [UIApplication sharedApplication].delegate;
     appdelegate.isEable = YES;
     Y_StockChartViewController *stockChartVC = [Y_StockChartViewController new];

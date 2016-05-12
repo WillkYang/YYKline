@@ -65,9 +65,6 @@
 
 -(id) stockDatasWithIndex:(NSInteger)index
 {
-//    if(self.currentIndex == index) {
-//        return nil;
-//    }
     NSString *type;
     switch (index) {
         case 0:
@@ -119,35 +116,10 @@
     self.type = type;
     if(![self.modelsDict objectForKey:type])
     {
-//        NSTimer *timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(reloadData) userInfo:nil repeats:YES];
-//        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
         [self reloadData];
     } else {
         return [self.modelsDict objectForKey:type].models;
     }
-//    if(!self.groupModel)
-//    {
-//        NSMutableDictionary *param = [NSMutableDictionary dictionary];
-//        param[@"type"] = @"30min";
-//        param[@"symbol"] = @"huobibtccny";
-//        param[@"size"] = @"300";
-//        
-//        [NetWorking requestWithApi:@"https://www.btc123.com/kline/klineapi" param:param thenSuccess:^(NSDictionary *responseObject) {
-//            if ([responseObject[@"isSuc"] boolValue]) {
-//                Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"datas"]];
-//
-//                self.groupModel = groupModel;
-//                NSLog(@"%@",groupModel);
-//                [self.stockChartView reloadData];
-//            }
-//            
-//        } fail:^{
-//            
-//        }];
-//    } else {
-//       return self.groupModel.models;
-//    }
-
     return nil;
 }
 
