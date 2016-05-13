@@ -1,4 +1,10 @@
 # Y_KLine(如果看着可以或者帮到了你，顺手给个赞呗~(*^__^*)~)
+==============
+
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/chenyk0317/YKLineChartView/blob/master/LICENSE)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/p/YKLineChartView.svg?style=flat)](http://cocoapods.org/?q= YKLineChartView)&nbsp;
+[![Support](https://img.shields.io/badge/support-iOS7.0+-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
+[![Support](https://img.shields.io/badge/support-Autolayout-orange.svg?style=flatt)](https://www.apple.com/)&nbsp;
 ---
 ##普通K线
 ![普通K线](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232207577-321982028.png)
