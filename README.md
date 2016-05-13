@@ -5,7 +5,6 @@
 [![Support](https://img.shields.io/badge/support-iOS7.0+-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 [![Support](https://img.shields.io/badge/support-Autolayout-orange.svg?style=flatt)](https://www.apple.com/)&nbsp;
 
----
 ##普通K线
 ![普通K线](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232207577-321982028.png)
 ---
