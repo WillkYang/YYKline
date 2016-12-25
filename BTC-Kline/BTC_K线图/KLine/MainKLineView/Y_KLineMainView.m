@@ -117,7 +117,7 @@
             [kLineColors addObject:kLineColor];
         }];
     } else {
-        NSMutableArray *positions = @[].mutableCopy;
+        __block NSMutableArray *positions = @[].mutableCopy;
         [self.needDrawKLinePositionModels enumerateObjectsUsingBlock:^(Y_KLinePositionModel * _Nonnull positionModel, NSUInteger idx, BOOL * _Nonnull stop) {
             UIColor *strokeColor = positionModel.OpenPoint.y < positionModel.ClosePoint.y ? [UIColor increaseColor] : [UIColor decreaseColor];
             [kLineColors addObject:strokeColor];
@@ -126,7 +126,8 @@
         MALine.MAPositions = positions;
         MALine.MAType = -1;
         [MALine draw];
-//        
+//
+        __block CGPoint lastDrawDatePoint = CGPointZero;//fix
         [self.needDrawKLinePositionModels enumerateObjectsUsingBlock:^(Y_KLinePositionModel * _Nonnull positionModel, NSUInteger idx, BOOL * _Nonnull stop) {
             
             CGPoint point = [positions[idx] CGPointValue];
@@ -139,7 +140,6 @@
             NSString *dateStr = [formatter stringFromDate:date];
  
             CGPoint drawDatePoint = CGPointMake(point.x + 1, Y_StockChartKLineMainViewMaxY + 1.5);
-            CGPoint lastDrawDatePoint;
             if(CGPointEqualToPoint(lastDrawDatePoint, CGPointZero) || point.x - lastDrawDatePoint.x > 60 )
             {
                 [dateStr drawAtPoint:drawDatePoint withAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:11],NSForegroundColorAttributeName : [UIColor assistTextColor]}];
