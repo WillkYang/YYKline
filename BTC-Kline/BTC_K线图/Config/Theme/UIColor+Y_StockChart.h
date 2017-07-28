@@ -76,5 +76,19 @@
  */
 +(UIColor *)ma30Color;
 
+/**
+ *  BOLL_MB颜色
+ */
++(UIColor *)BOLL_MBColor;
+
+/**
+ *  BOLL_UP颜色
+ */
++(UIColor *)BOLL_UPColor;
+
+/**
+ *  BOLL_DN颜色
+ */
++(UIColor *)BOLL_DNColor;
 
 @end

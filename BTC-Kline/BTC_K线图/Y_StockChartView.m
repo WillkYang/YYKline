@@ -104,8 +104,16 @@
 - (void)y_StockChartSegmentView:(Y_StockChartSegmentView *)segmentView clickSegmentButtonIndex:(NSInteger)index
 {
     self.currentIndex = index;
-    if(index >= 100)
-    {
+    
+    if (index == 105) {
+        
+        [Y_StockChartGlobalVariable setisBOLLLine:Y_StockChartTargetLineStatusBOLL];
+        self.kLineView.targetLineStatus = index;
+        [self.kLineView reDraw];
+        [self bringSubviewToFront:self.segmentView];
+        
+    } else  if(index >= 100 && index != 105) {
+        
         [Y_StockChartGlobalVariable setisEMALine:index];
 //        if(index == Y_StockChartTargetLineStatusMA)
 //        {

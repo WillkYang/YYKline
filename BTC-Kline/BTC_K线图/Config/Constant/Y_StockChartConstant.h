@@ -178,6 +178,7 @@ typedef NS_ENUM(NSInteger, Y_StockChartTargetLineStatus) {
     Y_StockChartTargetLineStatusAccessoryClose,    //关闭Accessory线
     Y_StockChartTargetLineStatusMA , //MA线
     Y_StockChartTargetLineStatusEMA,  //EMA线
+    Y_StockChartTargetLineStatusBOLL,  //BOLL线
     Y_StockChartTargetLineStatusCloseMA  //MA关闭线
 
 };

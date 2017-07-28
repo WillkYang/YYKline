@@ -57,7 +57,7 @@ static NSInteger const Y_StockChartSegmentStartTag = 2000;
         _indicatorView = [UIView new];
         _indicatorView.backgroundColor = [UIColor assistBackgroundColor];
         
-        NSArray *titleArr = @[@"MACD",@"KDJ",@"关闭",@"MA",@"EMA",@"关闭"];
+        NSArray *titleArr = @[@"MACD",@"KDJ",@"关闭",@"MA",@"EMA",@"BOLL",@"关闭"];
         __block UIButton *preBtn;
         [titleArr enumerateObjectsUsingBlock:^(NSString*  _Nonnull title, NSUInteger idx, BOOL * _Nonnull stop) {
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];

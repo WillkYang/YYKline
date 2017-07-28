@@ -87,4 +87,23 @@
 {
     return [UIColor colorWithRGBHex:0x49a5ff];
 }
+
+#pragma mark BOLL_MB的颜色
++(UIColor *)BOLL_MBColor
+{
+    return [UIColor whiteColor];
+}
+
+#pragma mark BOLL_UP的颜色
++(UIColor *)BOLL_UPColor
+{
+    return [UIColor purpleColor];
+}
+
+#pragma mark BOLL_DN的颜色
++(UIColor *)BOLL_DNColor
+{
+    return [UIColor greenColor];
+}
+
 @end

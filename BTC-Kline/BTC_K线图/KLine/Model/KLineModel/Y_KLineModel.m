@@ -273,6 +273,131 @@
     return _MACD;
 }
 
+#pragma mark BOLL线
+
+- (NSNumber *)MA20{
+    
+    if (!_MA20) {
+        
+        NSInteger index = [self.ParentGroupModel.models indexOfObject:self];
+        if (index >= 19) {
+            if (index > 19) {
+                _MA20 = @((self.SumOfLastClose.floatValue - self.ParentGroupModel.models[index - 20].SumOfLastClose.floatValue) / 20);
+            } else {
+                _MA20 = @(self.SumOfLastClose.floatValue / 20);
+            }
+        }
+    }
+    return _MA20;
+    
+}
+
+- (NSNumber *)BOLL_MB {
+    
+    if(!_BOLL_MB) {
+        
+        NSInteger index = [self.ParentGroupModel.models indexOfObject:self];
+        if (index >= 19) {
+            
+            if (index > 19) {
+                _BOLL_MB = @((self.SumOfLastClose.floatValue - self.ParentGroupModel.models[index - 19].SumOfLastClose.floatValue) / 19);
+                
+            } else {
+                
+                _BOLL_MB = @(self.SumOfLastClose.floatValue / index);
+                
+            }
+        }
+        
+        // NSLog(@"lazyMB:\n _BOLL_MB: %@", _BOLL_MB);
+        
+    }
+    
+    return _BOLL_MB;
+}
+
+- (NSNumber *)BOLL_MD {
+    
+    if (!_BOLL_MD) {
+        
+        NSInteger index = [self.ParentGroupModel.models indexOfObject:self];
+        
+        if (index >= 20) {
+            
+            _BOLL_MD = @(sqrt((self.PreviousKlineModel.BOLL_SUBMD_SUM.floatValue - self.ParentGroupModel.models[index - 20].BOLL_SUBMD_SUM.floatValue)/ 20));
+            
+        }
+        
+    }
+    
+    // NSLog(@"lazy:\n_BOLL_MD:%@ -- BOLL_SUBMD:%@",_BOLL_MD,_BOLL_SUBMD);
+    
+    return _BOLL_MD;
+}
+
+- (NSNumber *)BOLL_UP {
+    if (!_BOLL_UP) {
+        NSInteger index = [self.ParentGroupModel.models indexOfObject:self];
+        if (index >= 20) {
+            _BOLL_UP = @(self.BOLL_MB.floatValue + 2 * self.BOLL_MD.floatValue);
+        }
+    }
+    
+    // NSLog(@"lazy:\n_BOLL_UP:%@ -- BOLL_MD:%@",_BOLL_UP,_BOLL_MD);
+    
+    return _BOLL_UP;
+}
+
+- (NSNumber *)BOLL_DN {
+    if (!_BOLL_DN) {
+        NSInteger index = [self.ParentGroupModel.models indexOfObject:self];
+        if (index >= 20) {
+            _BOLL_DN = @(self.BOLL_MB.floatValue - 2 * self.BOLL_MD.floatValue);
+        }
+    }
+    
+    // NSLog(@"lazy:\n_BOLL_DN:%@ -- BOLL_MD:%@",_BOLL_DN,_BOLL_MD);
+    
+    return _BOLL_DN;
+}
+
+- (NSNumber *)BOLL_SUBMD_SUM {
+    
+    if (!_BOLL_SUBMD_SUM) {
+        
+        NSInteger index = [self.ParentGroupModel.models indexOfObject:self];
+        if (index >= 20) {
+            
+            _BOLL_SUBMD_SUM = @(self.PreviousKlineModel.BOLL_SUBMD_SUM.floatValue + self.BOLL_SUBMD.floatValue);
+            
+        }
+    }
+    
+    // NSLog(@"lazy:\n_BOLL_SUBMD_SUM:%@ -- BOLL_SUBMD:%@",_BOLL_SUBMD_SUM,_BOLL_SUBMD);
+    
+    return _BOLL_SUBMD_SUM;
+}
+
+- (NSNumber *)BOLL_SUBMD{
+    
+    if (!_BOLL_SUBMD) {
+        
+        NSInteger index = [self.ParentGroupModel.models indexOfObject:self];
+        
+        if (index >= 20) {
+            
+            _BOLL_SUBMD = @((self.Close.floatValue - self.MA20.floatValue) * ( self.Close.floatValue - self.MA20.floatValue));
+                        
+        }
+    }
+    
+    // NSLog(@"lazy_BOLL_SUBMD: \n MA20: %@ \n Close: %@ \n subNum: %f", _MA20, _Close, self.Close.floatValue - self.MA20.floatValue);
+    
+    return _BOLL_SUBMD;
+}
+
+
+
 - (Y_KLineModel *)PreviousKlineModel
 {
     if (!_PreviousKlineModel) {
@@ -297,7 +422,14 @@
         _PreviousKlineModel.KDJ_K = @(50);
         _PreviousKlineModel.KDJ_D = @(50);
 
- 
+        _PreviousKlineModel.MA20 = @(0);
+        _PreviousKlineModel.BOLL_MD = @(0);
+        _PreviousKlineModel.BOLL_MB = @(0);
+        _PreviousKlineModel.BOLL_DN = @(0);
+        _PreviousKlineModel.BOLL_UP = @(0);
+        _PreviousKlineModel.BOLL_SUBMD_SUM = @(0);
+        _PreviousKlineModel.BOLL_SUBMD = @(0);
+        
     }
     return _PreviousKlineModel;
 }
@@ -444,6 +576,15 @@
     [self KDJ_K];
     [self KDJ_D];
     [self KDJ_J];
+    
+    [self MA20];
+    [self BOLL_MD];
+    [self BOLL_MB];
+    [self BOLL_UP];
+    [self BOLL_DN];
+    [self BOLL_SUBMD];
+    [self BOLL_SUBMD_SUM];
+    
 }
 
 - (void)initData {
@@ -465,6 +606,14 @@
     [self KDJ_K];
     [self KDJ_D];
     [self KDJ_J];
+    
+    [self MA20];
+    [self BOLL_MD];
+    [self BOLL_MB];
+    [self BOLL_UP];
+    [self BOLL_DN];
+    [self BOLL_SUBMD];
+    [self BOLL_SUBMD_SUM];
 
 }
 @end

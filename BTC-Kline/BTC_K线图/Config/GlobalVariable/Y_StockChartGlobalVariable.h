@@ -42,4 +42,13 @@
  */
 + (CGFloat)isEMALine;
 + (void)setisEMALine:(Y_StockChartTargetLineStatus)type;
+
+
+
+/**
+ *  isBOLL线
+ */
++ (CGFloat)isBOLLLine;
++ (void)setisBOLLLine:(Y_StockChartTargetLineStatus)type;
+
 @end

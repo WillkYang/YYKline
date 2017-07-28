@@ -11,6 +11,9 @@
 typedef NS_ENUM(NSInteger, Y_MAType){
     Y_MA7Type = 0,
     Y_MA30Type,
+    Y_BOLL_MB,
+    Y_BOLL_UP,
+    Y_BOLL_DN
 };
 
 /**
@@ -19,6 +22,8 @@ typedef NS_ENUM(NSInteger, Y_MAType){
 @interface Y_MALine : NSObject
 
 @property (nonatomic, strong) NSArray *MAPositions;
+
+@property (nonatomic, strong) NSArray *BOLLPositions;
 
 @property (nonatomic, assign) Y_MAType MAType;
 /**
