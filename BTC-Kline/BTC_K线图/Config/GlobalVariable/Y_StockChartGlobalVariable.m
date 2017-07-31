@@ -34,6 +34,11 @@ static CGFloat Y_StockChartKLineVolumeViewRadio = 0.2;
  */
 static Y_StockChartTargetLineStatus Y_StockChartKLineIsEMALine = Y_StockChartTargetLineStatusMA;
 
+/**
+ *  是否为BOLL线
+ */
+static Y_StockChartTargetLineStatus Y_StockChartKLineIsBOLLLine = Y_StockChartTargetLineStatusBOLL;
+
 
 @implementation Y_StockChartGlobalVariable
 
@@ -105,4 +110,15 @@ static Y_StockChartTargetLineStatus Y_StockChartKLineIsEMALine = Y_StockChartTar
 {
     Y_StockChartKLineIsEMALine = type;
 }
+
+/**
+  *  isBOLL线
+  */
++ (CGFloat)isBOLLLine {
+    return Y_StockChartKLineIsBOLLLine;
+}
++ (void)setisBOLLLine:(Y_StockChartTargetLineStatus)type{
+    Y_StockChartKLineIsBOLLLine = type;
+}
+
 @end

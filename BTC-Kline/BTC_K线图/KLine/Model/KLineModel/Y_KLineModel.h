@@ -107,6 +107,29 @@ typedef NS_ENUM(NSInteger, YCoinType) {
 
 @property (nonatomic, copy) NSNumber *Volume_EMA30;
 
+#pragma BOLL线
+
+@property (nonatomic, copy) NSNumber *MA20;
+
+// 标准差 二次方根【 下的 (n-1)天的 C-MA二次方 和】
+@property (nonatomic, copy) NSNumber *BOLL_MD;
+
+// n-1 天的 MA
+@property (nonatomic, copy) NSNumber *BOLL_MB;
+
+// MB + k * MD
+@property (nonatomic, copy) NSNumber *BOLL_UP;
+
+// MB - k * MD
+@property (nonatomic, copy) NSNumber *BOLL_DN;
+
+//  n 个 ( Cn - MA20)的平方和
+@property (nonatomic, copy) NSNumber *BOLL_SUBMD_SUM;
+
+// 当前的 ( Cn - MA20)的平方
+@property (nonatomic, copy) NSNumber *BOLL_SUBMD;
+
+
 #pragma 第一个EMA等于MA；即EMA(n) = MA(n)
 
 // EMA（N）=2/（N+1）*（C-昨日EMA）+昨日EMA；
