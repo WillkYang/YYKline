@@ -48,8 +48,8 @@
     
     CGContextRef context = self.context;
     
-    //设置画笔颜色
-    UIColor *strokeColor = self.kLinePositionModel.OpenPoint.y < self.kLinePositionModel.ClosePoint.y ? [UIColor increaseColor] : [UIColor decreaseColor];
+    //设置画笔颜色 (y值越大，相应地值越小)
+    UIColor *strokeColor = self.kLinePositionModel.OpenPoint.y < self.kLinePositionModel.ClosePoint.y ? [UIColor decreaseColor] : [UIColor increaseColor];
     
     CGContextSetStrokeColorWithColor(context, strokeColor.CGColor);
     
