@@ -211,7 +211,9 @@ typedef NS_ENUM(NSInteger, YCoinType) {
 
 
 //初始化Model
-- (void) initWithArray:(NSArray *)arr;
+//- (void) initWithArray:(NSArray *)arr;
+
+- (void) initWithDict:(NSDictionary *)dict;
 
 //初始化第一条数据
 - (void) initFirstModel;

@@ -18,11 +18,12 @@
     __block Y_KLineModel *preModel = [[Y_KLineModel alloc]init];
     
     //设置数据
-    for (NSArray *valueArr in arr)
+    for (NSDictionary *dict in arr)
     {
         Y_KLineModel *model = [Y_KLineModel new];
         model.PreviousKlineModel = preModel;
-        [model initWithArray:valueArr];
+//        [model initWithArray:valueArr];
+        [model initWithDict:dict];
         model.ParentGroupModel = groupModel;
         
         [mutableArr addObject:model];

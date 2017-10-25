@@ -550,6 +550,24 @@
     }
 }
 
+- (void) initWithDict:(NSDictionary *)dict
+{
+    
+    if (self)
+    {
+        _Date = dict[@"id"];
+        _Open = @([dict[@"open"] floatValue]);
+        _High = @([dict[@"high"] floatValue]);
+        _Low = @([dict[@"low"] floatValue]);
+        _Close = @([dict[@"close"] floatValue]);
+        _Volume = [dict[@"vol"] floatValue];
+        self.SumOfLastClose = @(_Close.floatValue + self.PreviousKlineModel.SumOfLastClose.floatValue);
+        self.SumOfLastVolume = @(_Volume + self.PreviousKlineModel.SumOfLastVolume.floatValue);
+        //        NSLog(@"%@======%@======%@------%@",_Close,self.MA7,self.MA30,_SumOfLastClose);
+        
+    }
+}
+
 - (void)initFirstModel
 {
 //    _SumOfLastClose = _Close;

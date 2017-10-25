@@ -45,6 +45,7 @@ static NSInteger const Y_StockChartSegmentStartTag = 2000;
     self = [super initWithFrame:frame];
     if(self)
     {
+        self.clipsToBounds = YES;
         self.backgroundColor = [UIColor assistBackgroundColor];
     }
     return self;

@@ -14,6 +14,13 @@
 #import "Y_KLineGroupModel.h"
 #import "UIColor+Y_StockChart.h"
 #import "AppDelegate.h"
+
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define SCREEN_MAX_LENGTH MAX(kScreenWidth,kScreenHeight)
+#define IS_IPHONE_X (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)
+
 @interface Y_StockChartViewController ()<Y_StockChartViewDataSource>
 
 @property (nonatomic, strong) Y_StockChartView *stockChartView;
@@ -94,7 +101,7 @@
             break;
         case 5:
         {
-            type = @"1hour";
+            type = @"60min";
         }
             break;
         case 6:
@@ -126,13 +133,13 @@
 - (void)reloadData
 {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"type"] = self.type;
-    param[@"symbol"] = @"huobibtccny";
+    param[@"period"] = self.type;
+    param[@"symbol"] = @"bcccny";
     param[@"size"] = @"300";
     
-    [NetWorking requestWithApi:@"https://www.btc123.com/kline/klineapi" param:param thenSuccess:^(NSDictionary *responseObject) {
-        if ([responseObject[@"isSuc"] boolValue]) {
-            Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"datas"]];
+    [NetWorking requestWithApi:@"https://be.huobi.com/market/history/kline" param:param thenSuccess:^(NSDictionary *responseObject) {
+        if ([responseObject[@"status"] isEqualToString:@"ok"]) {
+            Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"data"]];
             
             self.groupModel = groupModel;
             [self.modelsDict setObject:groupModel forKey:self.type];
@@ -163,7 +170,11 @@
         _stockChartView.dataSource = self;
         [self.view addSubview:_stockChartView];
         [_stockChartView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
+            if (IS_IPHONE_X) {
+                make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(0, 30, 0, 0));
+            } else {
+                make.edges.equalTo(self.view);
+            }
         }];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismiss)];
         tap.numberOfTapsRequired = 2;
