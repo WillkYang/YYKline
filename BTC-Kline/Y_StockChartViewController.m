@@ -134,10 +134,10 @@
 {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"period"] = self.type;
-    param[@"symbol"] = @"bcccny";
+    param[@"symbol"] = @"btcusdt";
     param[@"size"] = @"300";
     
-    [NetWorking requestWithApi:@"https://be.huobi.com/market/history/kline" param:param thenSuccess:^(NSDictionary *responseObject) {
+    [NetWorking requestWithApi:@"https://api.huobi.pro/market/history/kline" param:param thenSuccess:^(NSDictionary *responseObject) {
         if ([responseObject[@"status"] isEqualToString:@"ok"]) {
             Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"data"]];
             
