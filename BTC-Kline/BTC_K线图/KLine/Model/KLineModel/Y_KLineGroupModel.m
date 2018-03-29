@@ -17,19 +17,31 @@
     NSMutableArray *mutableArr = @[].mutableCopy;
     __block Y_KLineModel *preModel = [[Y_KLineModel alloc]init];
     
-    //设置数据
-    for (NSDictionary *dict in arr)
+    //设置数据 1或2 选择一个即可
+    // 数组类型的源数据
+    for (NSArray *item in arr)
     {
         Y_KLineModel *model = [Y_KLineModel new];
         model.PreviousKlineModel = preModel;
-//        [model initWithArray:valueArr];
-        [model initWithDict:dict];
+        [model initWithArray:item];
         model.ParentGroupModel = groupModel;
-        
         [mutableArr addObject:model];
-        
+
         preModel = model;
     }
+    
+    // 字典类型的源数据
+//    for (NSDictionary *dict in arr)
+//    {
+//        Y_KLineModel *model = [Y_KLineModel new];
+//        model.PreviousKlineModel = preModel;
+//        [model initWithDict:dict];
+//        model.ParentGroupModel = groupModel;
+//
+//        [mutableArr addObject:model];
+//
+//        preModel = model;
+//    }
     
     groupModel.models = mutableArr;
     

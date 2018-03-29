@@ -101,7 +101,7 @@
             break;
         case 5:
         {
-            type = @"60min";
+            type = @"1hour";
         }
             break;
         case 6:
@@ -133,20 +133,15 @@
 - (void)reloadData
 {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"period"] = self.type;
-    param[@"symbol"] = @"btcusdt";
-    param[@"size"] = @"300";
-    
-    [NetWorking requestWithApi:@"https://api.huobi.pro/market/history/kline" param:param thenSuccess:^(NSDictionary *responseObject) {
-        if ([responseObject[@"status"] isEqualToString:@"ok"]) {
-            Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"data"]];
-            
-            self.groupModel = groupModel;
-            [self.modelsDict setObject:groupModel forKey:self.type];
-            NSLog(@"%@",groupModel);
-            [self.stockChartView reloadData];
-        }
-        
+    param[@"type"] = self.type;
+    param[@"market"] = @"btc_usdt";
+    param[@"size"] = @"1000";
+    [NetWorking requestWithApi:@"http://api.bitkk.com/data/v1/kline" param:param thenSuccess:^(NSDictionary *responseObject) {
+        Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"data"]];
+        self.groupModel = groupModel;
+        [self.modelsDict setObject:groupModel forKey:self.type];
+        NSLog(@"%@",groupModel);
+        [self.stockChartView reloadData];
     } fail:^{
         
     }];

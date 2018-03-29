@@ -566,7 +566,7 @@
 				TargetAttributes = {
 					84C0D7851CD117B40013B3D4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = K3BE43Q62M;
+						DevelopmentTeam = WXK7UF23NY;
 					};
 				};
 			};
@@ -776,7 +776,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K3BE43Q62M;
+				DEVELOPMENT_TEAM = WXK7UF23NY;
 				INFOPLIST_FILE = "BTC-Kline/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -792,7 +792,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K3BE43Q62M;
+				DEVELOPMENT_TEAM = WXK7UF23NY;
 				INFOPLIST_FILE = "BTC-Kline/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
