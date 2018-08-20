@@ -399,7 +399,8 @@
         }
         
         //更新竖线位置
-        CGFloat rightXPosition = [self.kLineMainView getExactXPositionWithOriginXPosition:location.x];
+        [self.kLineMainView getExactXPositionWithOriginXPosition:location.x];
+        CGFloat rightXPosition = location.x;
         [self.verticalView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(@(rightXPosition));
         }];

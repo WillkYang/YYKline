@@ -26,7 +26,6 @@
  */
 @property (nonatomic, strong) NSMutableArray *needDrawKLinePositionModels;
 
-
 /**
  *  Index开始X的值
  */
@@ -47,13 +46,10 @@
  */
 @property (nonatomic, strong) NSMutableArray *MA7Positions;
 
-
 /**
  *  MA30位置数组
  */
 @property (nonatomic, strong) NSMutableArray *MA30Positions;
-
-
 
 /**
  *  BOLL_MB位置数组
@@ -69,8 +65,6 @@
  *  BOLL_DN位置数组
  */
 @property (nonatomic, strong) NSMutableArray *BOLL_DNPositions;
-
-
 
 @end
 
@@ -120,10 +114,6 @@
     //设置显示日期的区域背景颜色
     CGContextSetFillColorWithColor(context, [UIColor assistBackgroundColor].CGColor);
     CGContextFillRect(context, CGRectMake(0, Y_StockChartKLineMainViewMaxY, self.frame.size.width, self.frame.size.height - Y_StockChartKLineMainViewMaxY));
-    
-    
-    
-    
     
     Y_MALine *MALine = [[Y_MALine alloc]initWithContext:context];
     
@@ -234,34 +224,23 @@
     if(kLineViewWidth < self.parentScrollView.bounds.size.width) {
         kLineViewWidth = self.parentScrollView.bounds.size.width;
     }
-    //    if (kLineViewWidth < [UIScreen mainScreen].bounds.size.width) {
-    //        kLineViewWidth = [UIScreen mainScreen].bounds.size.width;
-    //    }
     
     [self mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@(kLineViewWidth));
+        make.width.equalTo(self.parentScrollView);
+        make.left.equalTo(self.parentScrollView).offset(self.parentScrollView.contentOffset.x);
     }];
     
     [self layoutIfNeeded];
     
     //更新scrollview的contentsize
     self.parentScrollView.contentSize = CGSizeMake(kLineViewWidth, self.parentScrollView.contentSize.height);
-    //    CGFloat offset = self.parentScrollView.contentSize.width - self.parentScrollView.bounds.size.width;
-    //    if (offset > 0)
-    //    {
-    //        NSLog(@"计算出来的位移%f",offset);
-    //        [self.parentScrollView setContentOffset:CGPointMake(offset, 0) animated:YES];
-    //    } else {
-    //        NSLog(@"计算出来的位移%f",offset);
-    //        [self.parentScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
-    //    }
 }
 
 /**
  *  长按的时候根据原始的x位置获得精确的x的位置
  */
 - (CGFloat)getExactXPositionWithOriginXPosition:(CGFloat)originXPosition{
-    CGFloat xPositoinInMainView = originXPosition;
+    CGFloat xPositoinInMainView = originXPosition - self.parentScrollView.contentOffset.x;
     NSInteger startIndex = (NSInteger)((xPositoinInMainView - self.startXPosition) / ([Y_StockChartGlobalVariable kLineGap] + [Y_StockChartGlobalVariable kLineWidth]));
     NSInteger arrCount = self.needDrawKLinePositionModels.count;
     for (NSInteger index = startIndex > 0 ? startIndex - 1 : 0; index < arrCount; ++index) {
@@ -303,7 +282,6 @@
     } else {
         needDrawKLineStartIndex = self.needDrawStartIndex;
     }
-    
     
     NSLog(@"这是模型开始的index-----------%lu",needDrawKLineStartIndex);
     [self.needDrawKLineModels removeAllObjects];
@@ -425,12 +403,8 @@
     
     CGFloat minY = Y_StockChartKLineMainViewMinY;
     CGFloat maxY = self.parentScrollView.frame.size.height * [Y_StockChartGlobalVariable kLineMainViewRadio] - 15;
-    
     CGFloat unitValue = (maxAssert - minAssert)/(maxY - minY);
-    //    CGFloat ma7UnitValue = (maxMA7 - minMA7) / (maxY - minY);
-    //    CGFloat ma30UnitValue = (maxMA30 - minMA30) / (maxY - minY);
-    
-    
+
     [self.needDrawKLinePositionModels removeAllObjects];
     [self.MA7Positions removeAllObjects];
     [self.MA30Positions removeAllObjects];
@@ -603,9 +577,10 @@ static char *observerContext = NULL;
 }
 #pragma mark - setter,getter方法
 - (NSInteger)startXPosition{
-    NSInteger leftArrCount = self.needDrawStartIndex;
-    CGFloat startXPosition = (leftArrCount + 1) * [Y_StockChartGlobalVariable kLineGap] + leftArrCount * [Y_StockChartGlobalVariable kLineWidth] + [Y_StockChartGlobalVariable kLineWidth]/2;
-    return startXPosition;
+    return 0;
+//    NSInteger leftArrCount = self.needDrawStartIndex;
+//    CGFloat startXPosition = (leftArrCount + 1) * [Y_StockChartGlobalVariable kLineGap] + leftArrCount * [Y_StockChartGlobalVariable kLineWidth] + [Y_StockChartGlobalVariable kLineWidth]/2;
+//    return startXPosition;
 }
 
 - (NSInteger)needDrawStartIndex{
@@ -637,8 +612,11 @@ static char *observerContext = NULL;
         {
             self.oldContentOffsetX = self.parentScrollView.contentOffset.x;
             [self drawMainView];
+            [self mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(self.parentScrollView).offset(self.parentScrollView.contentOffset.x);
+                make.width.equalTo(self.parentScrollView);
+            }];
         }
-        
     }
 }
 

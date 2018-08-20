@@ -39,6 +39,8 @@
 没事,清新简洁的第二版K线也已经就绪了♪(^∇^*) 
 这边这边:https://github.com/yate1996/YYStock
 
-### 欢迎加群讨论其它：578874451
+### 欢迎加群讨论其它：755873102
 
 #### 欢迎 [Fork](https://github.com/yate1996/Y_KLine/fork) & [Pull Request](https://github.com/yate1996/Y_KLine/pulls) & [提问](https://github.com/yate1996/Y_KLine/issues/new)，我会更有动力处理的的😄～
+
+

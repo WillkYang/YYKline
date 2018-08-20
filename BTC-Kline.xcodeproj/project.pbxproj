@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8415E1F81CDC6D0E00F58CD3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8415E1DE1CDC6D0E00F58CD3 /* Info.plist */; };
 		8415E1F91CDC6D0E00F58CD3 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8415E1E01CDC6D0E00F58CD3 /* MASCompositeConstraint.m */; };
 		8415E1FA1CDC6D0E00F58CD3 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8415E1E31CDC6D0E00F58CD3 /* MASConstraint.m */; };
 		8415E1FB1CDC6D0E00F58CD3 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8415E1E51CDC6D0E00F58CD3 /* MASConstraintMaker.m */; };
@@ -586,7 +585,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C0D7991CD117B40013B3D4 /* LaunchScreen.storyboard in Resources */,
-				8415E1F81CDC6D0E00F58CD3 /* Info.plist in Resources */,
 				84C0D7961CD117B40013B3D4 /* Assets.xcassets in Resources */,
 				84C0D7941CD117B40013B3D4 /* Main.storyboard in Resources */,
 			);
