@@ -93,6 +93,14 @@
 - (void)updateMainViewWidth;
 
 /**
+ 获取needDrawStartIndex
+
+ @param scorll 是否在视图滚动的时候获取
+ @return needDrawStartIndex
+ */
+- (NSInteger)getNeedDrawStartIndexWithScroll:(BOOL)scorll;
+
+/**
  *  长按的时候根据原始的x位置获得精确的x的位置
  */
 - (CGFloat)getExactXPositionWithOriginXPosition:(CGFloat)originXPosition;
