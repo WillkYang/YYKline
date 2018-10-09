@@ -225,6 +225,11 @@
         kLineViewWidth = self.parentScrollView.bounds.size.width;
     }
     
+    if (self.pinchStartIndex)
+    {
+        CGFloat new_x = self.pinchStartIndex * ([Y_StockChartGlobalVariable kLineGap] + [Y_StockChartGlobalVariable kLineWidth]) + [Y_StockChartGlobalVariable kLineGap];
+        [self.parentScrollView setContentOffset:CGPointMake(new_x, 0) animated:NO];
+    }
     [self mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.parentScrollView);
         make.left.equalTo(self.parentScrollView).offset(self.parentScrollView.contentOffset.x);
@@ -280,7 +285,7 @@
         _needDrawStartIndex = self.pinchStartIndex;
         self.pinchStartIndex = -1;
     } else {
-        needDrawKLineStartIndex = self.needDrawStartIndex;
+        needDrawKLineStartIndex = [self getNeedDrawStartIndexWithScroll:YES];
     }
     
     NSLog(@"这是模型开始的index-----------%lu",needDrawKLineStartIndex);
@@ -578,15 +583,25 @@ static char *observerContext = NULL;
 #pragma mark - setter,getter方法
 - (NSInteger)startXPosition{
     return 0;
-//    NSInteger leftArrCount = self.needDrawStartIndex;
-//    CGFloat startXPosition = (leftArrCount + 1) * [Y_StockChartGlobalVariable kLineGap] + leftArrCount * [Y_StockChartGlobalVariable kLineWidth] + [Y_StockChartGlobalVariable kLineWidth]/2;
-//    return startXPosition;
 }
 
 - (NSInteger)needDrawStartIndex{
     CGFloat scrollViewOffsetX = self.parentScrollView.contentOffset.x < 0 ? 0 : self.parentScrollView.contentOffset.x;
     NSUInteger leftArrCount = ABS(scrollViewOffsetX - [Y_StockChartGlobalVariable kLineGap]) / ([Y_StockChartGlobalVariable kLineGap] + [Y_StockChartGlobalVariable kLineWidth]);
     _needDrawStartIndex = leftArrCount;
+    return _needDrawStartIndex;
+}
+
+- (NSInteger)getNeedDrawStartIndexWithScroll:(BOOL)scorll
+{
+    if (scorll)
+    {
+        CGFloat scrollViewOffsetX = self.parentScrollView.contentOffset.x < 0 ? 0 : self.parentScrollView.contentOffset.x;
+        NSUInteger leftArrCount = ABS(scrollViewOffsetX - [Y_StockChartGlobalVariable kLineGap]) / ([Y_StockChartGlobalVariable kLineGap] + [Y_StockChartGlobalVariable kLineWidth]);
+        
+        _needDrawStartIndex = leftArrCount;
+    }
+    
     return _needDrawStartIndex;
 }
 

@@ -345,13 +345,15 @@
     CGFloat difValue = pinch.scale - oldScale;
     if(ABS(difValue) > Y_StockChartScaleBound) {
         CGFloat oldKLineWidth = [Y_StockChartGlobalVariable kLineWidth];
-
-        NSInteger oldNeedDrawStartIndex = self.kLineMainView.needDrawStartIndex;
-        NSLog(@"原来的index%ld",self.kLineMainView.needDrawStartIndex);
+        if (oldKLineWidth == Y_StockChartKLineMinWidth && difValue <= 0)
+        {
+            return;
+        }
+        
+        NSInteger oldNeedDrawStartIndex = [self.kLineMainView getNeedDrawStartIndexWithScroll:NO];
+        
         [Y_StockChartGlobalVariable setkLineWith:oldKLineWidth * (difValue > 0 ? (1 + Y_StockChartScaleFactor) : (1 - Y_StockChartScaleFactor))];
         oldScale = pinch.scale;
-        //更新MainView的宽度
-        [self.kLineMainView updateMainViewWidth];
         
         if( pinch.numberOfTouches == 2 ) {
             CGPoint p1 = [pinch locationOfTouch:0 inView:self.scrollView];
@@ -361,9 +363,10 @@
             NSUInteger newLeftArrCount = ABS((centerPoint.x - self.scrollView.contentOffset.x) - [Y_StockChartGlobalVariable kLineGap]) / ([Y_StockChartGlobalVariable kLineGap] + [Y_StockChartGlobalVariable kLineWidth]);
             
             self.kLineMainView.pinchStartIndex = oldNeedDrawStartIndex + oldLeftArrCount - newLeftArrCount;
-            //            self.kLineMainView.pinchPoint = centerPoint;
-            NSLog(@"计算得出的index%lu",self.kLineMainView.pinchStartIndex);
         }
+        //更新MainView的宽度
+        [self.kLineMainView updateMainViewWidth];
+        
         [self.kLineMainView drawMainView];
     }
 }
