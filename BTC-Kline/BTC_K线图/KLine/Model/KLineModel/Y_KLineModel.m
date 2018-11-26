@@ -14,7 +14,7 @@
 - (NSNumber *)RSV_9
 {
     if (!_RSV_9) {
-        if(self.NineClocksMinPrice == self.NineClocksMaxPrice) {
+        if([self.NineClocksMinPrice compare:self.NineClocksMaxPrice] == NSOrderedSame) {
             _RSV_9 = @100;
         } else {
             _RSV_9 = @((self.Close.floatValue - self.NineClocksMinPrice.floatValue) * 100 / (self.NineClocksMaxPrice.floatValue - self.NineClocksMinPrice.floatValue));
