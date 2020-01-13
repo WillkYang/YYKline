@@ -5,6 +5,7 @@
 [![Support](https://img.shields.io/badge/support-iOS7.0+-blue.svg?style=flat)]() &nbsp;
 [![Support](https://img.shields.io/badge/support-Autolayout-orange.svg?style=flatt)]() &nbsp;
 
+感谢[@牛眼行情](https://niuyan.com)的K线数据源
 
 ## 普通K线
 
@@ -43,6 +44,4 @@
 
 #### 欢迎 [Fork](https://github.com/yate1996/Y_KLine/fork) & [Pull Request](https://github.com/yate1996/Y_KLine/pulls) & [提问](https://github.com/yate1996/Y_KLine/issues/new)，我会更有动力处理的的😄～
 
-如果ta帮到你节省了时间，是否请我喝杯咖啡？
---
-![](https://images.cnblogs.com/cnblogs_com/yate1996/710719/o_C83B4782DA1F7B7BA7539E802BA6BF14.png)
+

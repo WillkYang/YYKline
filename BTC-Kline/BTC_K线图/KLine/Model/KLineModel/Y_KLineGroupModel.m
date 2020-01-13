@@ -19,14 +19,14 @@
     
     //设置数据 1或2 选择一个即可
     // 数组类型的源数据
-    for (NSArray *item in arr)
-    {
+    
+    for (NSInteger i = [arr count]-1; i>=0; i--) {
+        NSArray *item = arr[i];
         Y_KLineModel *model = [Y_KLineModel new];
         model.PreviousKlineModel = preModel;
         [model initWithArray:item];
         model.ParentGroupModel = groupModel;
         [mutableArr addObject:model];
-
         preModel = model;
     }
     

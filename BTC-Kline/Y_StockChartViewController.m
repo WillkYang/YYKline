@@ -76,42 +76,42 @@
     switch (index) {
         case 0:
         {
-            type = @"1min";
+            type = @"1m";
         }
             break;
         case 1:
         {
-            type = @"1min";
+            type = @"1m";
         }
             break;
         case 2:
         {
-            type = @"1min";
+            type = @"1m";
         }
             break;
         case 3:
         {
-            type = @"5min";
+            type = @"5m";
         }
             break;
         case 4:
         {
-            type = @"30min";
+            type = @"30m";
         }
             break;
         case 5:
         {
-            type = @"1hour";
+            type = @"1h";
         }
             break;
         case 6:
         {
-            type = @"1day";
+            type = @"1d";
         }
             break;
         case 7:
         {
-            type = @"1week";
+            type = @"1w";
         }
             break;
             
@@ -133,11 +133,14 @@
 - (void)reloadData
 {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    param[@"type"] = self.type;
-    param[@"market"] = @"btc_usdt";
-    param[@"size"] = @"1000";
-    [NetWorking requestWithApi:@"http://api.bitkk.com/data/v1/kline" param:param thenSuccess:^(NSDictionary *responseObject) {
-        Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"data"]];
+    param[@"interval"] = self.type;
+    param[@"exchange_id"] = @"binance";
+    param[@"base_symbol"] = @"BTC";
+    param[@"quote_symbol"] = @"USDT";
+    param[@"lan"] = @"zh-ch";
+    param[@"size"] = @"500";
+    [NetWorking requestWithApi:@"https://h5-market.niuyan.com/web/v1/ticker/kline" param:param thenSuccess:^(NSDictionary *responseObject) {
+        Y_KLineGroupModel *groupModel = [Y_KLineGroupModel objectWithArray:responseObject[@"data"][@"data"]];
         self.groupModel = groupModel;
         [self.modelsDict setObject:groupModel forKey:self.type];
         NSLog(@"%@",groupModel);

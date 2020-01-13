@@ -146,7 +146,7 @@
             
             //日期
             
-            NSDate *date = [NSDate dateWithTimeIntervalSince1970:self.needDrawKLineModels[idx].Date.doubleValue];
+            NSDate *date = [NSDate dateWithTimeIntervalSince1970:self.needDrawKLineModels[idx].Date.doubleValue/1000];
             NSDateFormatter *formatter = [NSDateFormatter new];
             formatter.dateFormat = @"HH:mm";
             NSString *dateStr = [formatter stringFromDate:date];

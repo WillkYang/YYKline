@@ -536,13 +536,13 @@
 
     if (self)
     {
-        _Date = arr[0];
-        _Open = @([arr[1] floatValue]);
+        _Date = [NSString stringWithFormat:@"%ld", [arr[5] integerValue] * 1000];
+        _Open = @([arr[0] floatValue]);
         _High = @([arr[2] floatValue]);
-        _Low = @([arr[3] floatValue]);  
-        _Close = @([arr[4] floatValue]);
+        _Low = @([arr[3] floatValue]);
+        _Close = @([arr[1] floatValue]);
 
-        _Volume = [arr[5] floatValue];
+        _Volume = [arr[4] floatValue];
         self.SumOfLastClose = @(_Close.floatValue + self.PreviousKlineModel.SumOfLastClose.floatValue);
         self.SumOfLastVolume = @(_Volume + self.PreviousKlineModel.SumOfLastVolume.floatValue);
 //        NSLog(@"%@======%@======%@------%@",_Close,self.MA7,self.MA30,_SumOfLastClose);
