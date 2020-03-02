@@ -1,6 +1,6 @@
-# Y_KLine(如果看着可以或者帮到了你，顺手给个赞呗~(*^__^*)~)
+# Y_KLine
 
-### 欢迎加群讨论更多：755873102
+
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)]() &nbsp;
 [![Support](https://img.shields.io/badge/support-iOS7.0+-blue.svg?style=flat)]() &nbsp;
 [![Support](https://img.shields.io/badge/support-Autolayout-orange.svg?style=flatt)]() &nbsp;
@@ -35,13 +35,7 @@
 
 ![K线综合演示](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512231537202-1121097756.gif)
 
-咦,发现项目比较简单，不用复杂UI???
-
-没事,清新简洁的第二版K线也已经就绪了♪(^∇^*) 
-这边这边:https://github.com/yate1996/YYStock
-
-### 欢迎加群讨论其它：755873102
-
-#### 欢迎 [Fork](https://github.com/yate1996/Y_KLine/fork) & [Pull Request](https://github.com/yate1996/Y_KLine/pulls) & [提问](https://github.com/yate1996/Y_KLine/issues/new)，我会更有动力处理的的😄～
+### 加群讨论更多：755873102
+#### 欢迎 [Fork](https://github.com/yate1996/Y_KLine/fork) & [Pull Request](https://github.com/yate1996/Y_KLine/pulls) & [提问](https://github.com/yate1996/Y_KLine/issues/new)
 
 
