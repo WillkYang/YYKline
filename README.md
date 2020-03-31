@@ -14,13 +14,13 @@
 
 | 普通K线 | 普通K线+MACD
 |------------|------------
-| ![enter image description here](https://raw.githubusercontent.com/WillkYang/Y_KLine/master/Y_Kline/Screenshot/2.png) |![enter image description here](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232150452-239970289.png)
+| ![普通K线](https://github.com/WillkYang/Y_KLine/blob/master/Screenshot/2.png?raw=true) |![普通K线+MACD](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232150452-239970289.png)
 | 普通K线+KDJ | 分时图
-| ![enter image description here](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232158515-2083550522.png) |![enter image description here](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232213202-486002469.png)
+| ![普通K线+KDJ](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232158515-2083550522.png) |![分时图](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232213202-486002469.png)
 | 分时图+MACD | 更多指标
-| ![enter image description here](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232142827-1554494273.png) |![enter image description here](https://raw.githubusercontent.com/WillkYang/Y_KLine/master/Y_Kline/Screenshot/1.png)
+| ![分时图+MACD](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512232142827-1554494273.png) |![更多指标](https://github.com/WillkYang/Y_KLine/blob/master/Screenshot/1.png?raw=true)
 | 综合演示 
-| ![](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512231537202-1121097756.gif) |
+| ![综合演示](http://images2015.cnblogs.com/blog/784141/201605/784141-20160512231537202-1121097756.gif) |
 
 ## 集成方法
 1. 下载Demo项目，将Y_Kline文件夹拖入需要的工程中
