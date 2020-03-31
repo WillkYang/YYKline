@@ -2,8 +2,7 @@
 //  ViewController.m
 //  Y_Kline
 //
-//  Created by WillkYang on 2020/3/18.
-//  Copyright © 2020 WillkYang. All rights reserved.
+//  Copyright © 2019 WillkYang. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -16,11 +15,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+//    [self presentKlineVc:nil];
 }
 
 - (IBAction)presentKlineVc:(id)sender {
     Y_StockChartViewController *stockChartVC = [Y_StockChartViewController new];
+    stockChartVC.modalPresentationStyle = UIModalPresentationOverFullScreen;
     [self presentViewController:stockChartVC animated:YES completion:nil];
 }
 

@@ -142,8 +142,7 @@
     }
 }
 
-- (MAS_VIEW *)mas_commonSuperviewOfViews
-{
+- (MAS_VIEW *)mas_commonSuperviewOfViews {
     MAS_VIEW *commonSuperview = nil;
     MAS_VIEW *previousView = nil;
     for (id object in self) {

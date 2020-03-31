@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NetWorking : NSObject
-+(void)requestWithApi:(NSString *)url param:(NSMutableDictionary *)param thenSuccess:(void (^)(NSDictionary *responseObject))success fail:(void (^)(void))fail;
++ (void)requestWithApi:(NSString *)url param:(NSMutableDictionary *)param thenSuccess:(void (^)(NSDictionary *responseObject))success fail:(void (^)(void))fail;
 
 @end

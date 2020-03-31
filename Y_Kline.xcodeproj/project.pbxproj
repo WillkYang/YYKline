@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4025A21A242A59630092B17F /* YYVolPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4025A219242A59630092B17F /* YYVolPainter.m */; };
+		4025A221242A67270092B17F /* YYMACDPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4025A220242A67270092B17F /* YYMACDPainter.m */; };
+		4025A225242B2FE10092B17F /* YYKDJPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4025A224242B2FE10092B17F /* YYKDJPainter.m */; };
+		4025A229242B326C0092B17F /* YYVerticalTextPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4025A228242B326C0092B17F /* YYVerticalTextPainter.m */; };
+		40A9FAD22424DF5E006DF1DE /* YYCandlePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9FAD12424DF5E006DF1DE /* YYCandlePainter.m */; };
+		40B221EE2428FB9F0083EB7D /* YYMinMaxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B221ED2428FB9F0083EB7D /* YYMinMaxModel.m */; };
+		40B221F1242A4DF60083EB7D /* YYMAPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B221F0242A4DF60083EB7D /* YYMAPainter.m */; };
 		40B7E5EC2422231700F1F180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E5EB2422231700F1F180 /* AppDelegate.m */; };
-		40B7E5EF2422231700F1F180 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E5EE2422231700F1F180 /* SceneDelegate.m */; };
 		40B7E5F22422231700F1F180 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E5F12422231700F1F180 /* ViewController.m */; };
 		40B7E5F52422231700F1F180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B7E5F32422231700F1F180 /* Main.storyboard */; };
 		40B7E5F72422231C00F1F180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B7E5F62422231C00F1F180 /* Assets.xcassets */; };
@@ -25,15 +31,6 @@
 		40B7E68C2422239D00F1F180 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E61D2422239C00F1F180 /* MASConstraint.m */; };
 		40B7E68D2422239D00F1F180 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E61F2422239C00F1F180 /* MASViewConstraint.m */; };
 		40B7E68E2422239D00F1F180 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6202422239C00F1F180 /* MASViewAttribute.m */; };
-		40B7E6902422239D00F1F180 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6242422239C00F1F180 /* UIProgressView+AFNetworking.m */; };
-		40B7E6912422239D00F1F180 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6262422239C00F1F180 /* UIRefreshControl+AFNetworking.m */; };
-		40B7E6922422239D00F1F180 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6292422239C00F1F180 /* AFNetworkActivityIndicatorManager.m */; };
-		40B7E6932422239D00F1F180 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E62F2422239C00F1F180 /* UIImageView+AFNetworking.m */; };
-		40B7E6942422239D00F1F180 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6322422239C00F1F180 /* UIButton+AFNetworking.m */; };
-		40B7E6952422239D00F1F180 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6332422239C00F1F180 /* UIActivityIndicatorView+AFNetworking.m */; };
-		40B7E6962422239D00F1F180 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6342422239C00F1F180 /* UIWebView+AFNetworking.m */; };
-		40B7E6972422239D00F1F180 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6352422239C00F1F180 /* AFAutoPurgingImageCache.m */; };
-		40B7E6982422239D00F1F180 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6372422239C00F1F180 /* AFImageDownloader.m */; };
 		40B7E6992422239D00F1F180 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E63D2422239C00F1F180 /* AFURLResponseSerialization.m */; };
 		40B7E69A2422239D00F1F180 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E63E2422239C00F1F180 /* AFHTTPSessionManager.m */; };
 		40B7E69B2422239D00F1F180 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6402422239C00F1F180 /* AFURLSessionManager.m */; };
@@ -43,32 +40,40 @@
 		40B7E69F2422239D00F1F180 /* Y_StockChartGlobalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E64B2422239C00F1F180 /* Y_StockChartGlobalVariable.m */; };
 		40B7E6A02422239D00F1F180 /* UIColor+Y_StockChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6502422239C00F1F180 /* UIColor+Y_StockChart.m */; };
 		40B7E6A12422239D00F1F180 /* Y_StockChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6512422239C00F1F180 /* Y_StockChartView.m */; };
-		40B7E6A22422239D00F1F180 /* Y_KLineMAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6552422239C00F1F180 /* Y_KLineMAView.m */; };
 		40B7E6A32422239D00F1F180 /* Y_KLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6562422239C00F1F180 /* Y_KLineView.m */; };
-		40B7E6A42422239D00F1F180 /* Y_StockChartRightYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6582422239C00F1F180 /* Y_StockChartRightYView.m */; };
-		40B7E6A52422239D00F1F180 /* Y_VolumeMAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E65C2422239C00F1F180 /* Y_VolumeMAView.m */; };
-		40B7E6A62422239D00F1F180 /* Y_KLineAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E65E2422239C00F1F180 /* Y_KLineAccessoryView.m */; };
-		40B7E6A72422239D00F1F180 /* Y_KLineAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6612422239C00F1F180 /* Y_KLineAccessory.m */; };
-		40B7E6A82422239D00F1F180 /* Y_AccessoryMAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6642422239C00F1F180 /* Y_AccessoryMAView.m */; };
-		40B7E6A92422239D00F1F180 /* Y_KLinePositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6682422239C00F1F180 /* Y_KLinePositionModel.m */; };
-		40B7E6AA2422239D00F1F180 /* Y_KLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E66D2422239C00F1F180 /* Y_KLineModel.m */; };
-		40B7E6AB2422239D00F1F180 /* Y_KLineGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E66E2422239C00F1F180 /* Y_KLineGroupModel.m */; };
-		40B7E6AC2422239D00F1F180 /* Y_KLineVolumePositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E66F2422239C00F1F180 /* Y_KLineVolumePositionModel.m */; };
-		40B7E6AD2422239D00F1F180 /* Y_KLineVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6722422239C00F1F180 /* Y_KLineVolumeView.m */; };
-		40B7E6AE2422239D00F1F180 /* Y_KLineVolume.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6742422239C00F1F180 /* Y_KLineVolume.m */; };
-		40B7E6AF2422239D00F1F180 /* Y_KLineMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6782422239C00F1F180 /* Y_KLineMainView.m */; };
-		40B7E6B02422239D00F1F180 /* Y_MALine.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E67C2422239C00F1F180 /* Y_MALine.m */; };
-		40B7E6B12422239D00F1F180 /* Y_KLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E67D2422239C00F1F180 /* Y_KLine.m */; };
+		40B7E6AB2422239D00F1F180 /* Y_KLineRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E66E2422239C00F1F180 /* Y_KLineRootModel.m */; };
 		40B7E6B22422239D00F1F180 /* Y_StockChartSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6802422239D00F1F180 /* Y_StockChartSegmentView.m */; };
 		40B7E6B32422239D00F1F180 /* Y_StockChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6822422239D00F1F180 /* Y_StockChartViewController.m */; };
+		40B7E6BD24226A1D00F1F180 /* YYKlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B7E6BC24226A1D00F1F180 /* YYKlineModel.m */; };
+		40C54192242B5A2900F5370A /* YYTimePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C54191242B5A2900F5370A /* YYTimePainter.m */; };
+		40D7106A24323AC000D5D1C9 /* YYRSIPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D7106924323AC000D5D1C9 /* YYRSIPainter.m */; };
+		40D7106D24323AC900D5D1C9 /* YYWRPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D7106C24323AC900D5D1C9 /* YYWRPainter.m */; };
+		40D7107224323D5900D5D1C9 /* YYBOLLPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D7107124323D5900D5D1C9 /* YYBOLLPainter.m */; };
+		40D7107524323D6300D5D1C9 /* YYEMAPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D7107424323D6300D5D1C9 /* YYEMAPainter.m */; };
+		40D710792432467300D5D1C9 /* YYTimelinePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D710782432467300D5D1C9 /* YYTimelinePainter.m */; };
+		40D7107C24324F5200D5D1C9 /* YYIndicatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D7107B24324F5200D5D1C9 /* YYIndicatorModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4025A218242A59630092B17F /* YYVolPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYVolPainter.h; sourceTree = "<group>"; };
+		4025A219242A59630092B17F /* YYVolPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYVolPainter.m; sourceTree = "<group>"; };
+		4025A21F242A67270092B17F /* YYMACDPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMACDPainter.h; sourceTree = "<group>"; };
+		4025A220242A67270092B17F /* YYMACDPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMACDPainter.m; sourceTree = "<group>"; };
+		4025A223242B2FE10092B17F /* YYKDJPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKDJPainter.h; sourceTree = "<group>"; };
+		4025A224242B2FE10092B17F /* YYKDJPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYKDJPainter.m; sourceTree = "<group>"; };
+		4025A227242B326C0092B17F /* YYVerticalTextPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYVerticalTextPainter.h; sourceTree = "<group>"; };
+		4025A228242B326C0092B17F /* YYVerticalTextPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYVerticalTextPainter.m; sourceTree = "<group>"; };
+		4053FFCE242CE4AC00683423 /* Y_Kline.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Y_Kline.entitlements; sourceTree = "<group>"; };
+		40A9FAD02424DF5E006DF1DE /* YYCandlePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCandlePainter.h; sourceTree = "<group>"; };
+		40A9FAD12424DF5E006DF1DE /* YYCandlePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCandlePainter.m; sourceTree = "<group>"; };
+		40A9FAD32424DF74006DF1DE /* YYPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYPainter.h; sourceTree = "<group>"; };
+		40B221EC2428FB9F0083EB7D /* YYMinMaxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMinMaxModel.h; sourceTree = "<group>"; };
+		40B221ED2428FB9F0083EB7D /* YYMinMaxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMinMaxModel.m; sourceTree = "<group>"; };
+		40B221EF242A4DF60083EB7D /* YYMAPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYMAPainter.h; sourceTree = "<group>"; };
+		40B221F0242A4DF60083EB7D /* YYMAPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYMAPainter.m; sourceTree = "<group>"; };
 		40B7E5E72422231700F1F180 /* Y_Kline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Y_Kline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B7E5EA2422231700F1F180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40B7E5EB2422231700F1F180 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		40B7E5ED2422231700F1F180 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		40B7E5EE2422231700F1F180 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		40B7E5F02422231700F1F180 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		40B7E5F12422231700F1F180 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		40B7E5F42422231700F1F180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,26 +108,6 @@
 		40B7E61E2422239C00F1F180 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		40B7E61F2422239C00F1F180 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		40B7E6202422239C00F1F180 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
-		40B7E6242422239C00F1F180 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
-		40B7E6252422239C00F1F180 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E6262422239C00F1F180 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
-		40B7E6272422239C00F1F180 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E6282422239C00F1F180 /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
-		40B7E6292422239C00F1F180 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		40B7E62A2422239C00F1F180 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
-		40B7E62B2422239C00F1F180 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E62C2422239C00F1F180 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E62D2422239C00F1F180 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E62E2422239C00F1F180 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E62F2422239C00F1F180 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		40B7E6302422239C00F1F180 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E6312422239C00F1F180 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
-		40B7E6322422239C00F1F180 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		40B7E6332422239C00F1F180 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		40B7E6342422239C00F1F180 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		40B7E6352422239C00F1F180 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
-		40B7E6362422239C00F1F180 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		40B7E6372422239C00F1F180 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
 		40B7E6392422239C00F1F180 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		40B7E63A2422239C00F1F180 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		40B7E63B2422239C00F1F180 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -143,42 +128,30 @@
 		40B7E64F2422239C00F1F180 /* UIColor+Y_StockChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Y_StockChart.h"; sourceTree = "<group>"; };
 		40B7E6502422239C00F1F180 /* UIColor+Y_StockChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Y_StockChart.m"; sourceTree = "<group>"; };
 		40B7E6512422239C00F1F180 /* Y_StockChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_StockChartView.m; sourceTree = "<group>"; };
-		40B7E6542422239C00F1F180 /* Y_KLineMAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineMAView.h; sourceTree = "<group>"; };
-		40B7E6552422239C00F1F180 /* Y_KLineMAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineMAView.m; sourceTree = "<group>"; };
 		40B7E6562422239C00F1F180 /* Y_KLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineView.m; sourceTree = "<group>"; };
-		40B7E6582422239C00F1F180 /* Y_StockChartRightYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_StockChartRightYView.m; sourceTree = "<group>"; };
-		40B7E6592422239C00F1F180 /* Y_StockChartRightYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_StockChartRightYView.h; sourceTree = "<group>"; };
-		40B7E65B2422239C00F1F180 /* Y_VolumeMAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_VolumeMAView.h; sourceTree = "<group>"; };
-		40B7E65C2422239C00F1F180 /* Y_VolumeMAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_VolumeMAView.m; sourceTree = "<group>"; };
-		40B7E65E2422239C00F1F180 /* Y_KLineAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineAccessoryView.m; sourceTree = "<group>"; };
-		40B7E6602422239C00F1F180 /* Y_KLineAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineAccessory.h; sourceTree = "<group>"; };
-		40B7E6612422239C00F1F180 /* Y_KLineAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineAccessory.m; sourceTree = "<group>"; };
-		40B7E6622422239C00F1F180 /* Y_KLineAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineAccessoryView.h; sourceTree = "<group>"; };
-		40B7E6642422239C00F1F180 /* Y_AccessoryMAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_AccessoryMAView.m; sourceTree = "<group>"; };
-		40B7E6652422239C00F1F180 /* Y_AccessoryMAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_AccessoryMAView.h; sourceTree = "<group>"; };
-		40B7E6682422239C00F1F180 /* Y_KLinePositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLinePositionModel.m; sourceTree = "<group>"; };
-		40B7E6692422239C00F1F180 /* Y_KLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineModel.h; sourceTree = "<group>"; };
-		40B7E66A2422239C00F1F180 /* Y_KLineGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineGroupModel.h; sourceTree = "<group>"; };
-		40B7E66B2422239C00F1F180 /* Y_KLineVolumePositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineVolumePositionModel.h; sourceTree = "<group>"; };
-		40B7E66C2422239C00F1F180 /* Y_KLinePositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLinePositionModel.h; sourceTree = "<group>"; };
-		40B7E66D2422239C00F1F180 /* Y_KLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineModel.m; sourceTree = "<group>"; };
-		40B7E66E2422239C00F1F180 /* Y_KLineGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineGroupModel.m; sourceTree = "<group>"; };
-		40B7E66F2422239C00F1F180 /* Y_KLineVolumePositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineVolumePositionModel.m; sourceTree = "<group>"; };
+		40B7E66A2422239C00F1F180 /* Y_KLineRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineRootModel.h; sourceTree = "<group>"; };
+		40B7E66E2422239C00F1F180 /* Y_KLineRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineRootModel.m; sourceTree = "<group>"; };
 		40B7E6702422239C00F1F180 /* Y_KLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineView.h; sourceTree = "<group>"; };
-		40B7E6722422239C00F1F180 /* Y_KLineVolumeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineVolumeView.m; sourceTree = "<group>"; };
-		40B7E6742422239C00F1F180 /* Y_KLineVolume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineVolume.m; sourceTree = "<group>"; };
-		40B7E6752422239C00F1F180 /* Y_KLineVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineVolume.h; sourceTree = "<group>"; };
-		40B7E6762422239C00F1F180 /* Y_KLineVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineVolumeView.h; sourceTree = "<group>"; };
-		40B7E6782422239C00F1F180 /* Y_KLineMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLineMainView.m; sourceTree = "<group>"; };
-		40B7E67A2422239C00F1F180 /* Y_MALine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_MALine.h; sourceTree = "<group>"; };
-		40B7E67B2422239C00F1F180 /* Y_KLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLine.h; sourceTree = "<group>"; };
-		40B7E67C2422239C00F1F180 /* Y_MALine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_MALine.m; sourceTree = "<group>"; };
-		40B7E67D2422239C00F1F180 /* Y_KLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_KLine.m; sourceTree = "<group>"; };
-		40B7E67E2422239C00F1F180 /* Y_KLineMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_KLineMainView.h; sourceTree = "<group>"; };
 		40B7E6802422239D00F1F180 /* Y_StockChartSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_StockChartSegmentView.m; sourceTree = "<group>"; };
 		40B7E6812422239D00F1F180 /* Y_StockChartSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_StockChartSegmentView.h; sourceTree = "<group>"; };
 		40B7E6822422239D00F1F180 /* Y_StockChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Y_StockChartViewController.m; sourceTree = "<group>"; };
 		40B7E6832422239D00F1F180 /* Y_StockChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Y_StockChartViewController.h; sourceTree = "<group>"; };
+		40B7E6BB24226A1D00F1F180 /* YYKlineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKlineModel.h; sourceTree = "<group>"; };
+		40B7E6BC24226A1D00F1F180 /* YYKlineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYKlineModel.m; sourceTree = "<group>"; };
+		40C54190242B5A2900F5370A /* YYTimePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTimePainter.h; sourceTree = "<group>"; };
+		40C54191242B5A2900F5370A /* YYTimePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTimePainter.m; sourceTree = "<group>"; };
+		40D7106824323AC000D5D1C9 /* YYRSIPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYRSIPainter.h; sourceTree = "<group>"; };
+		40D7106924323AC000D5D1C9 /* YYRSIPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYRSIPainter.m; sourceTree = "<group>"; };
+		40D7106B24323AC900D5D1C9 /* YYWRPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYWRPainter.h; sourceTree = "<group>"; };
+		40D7106C24323AC900D5D1C9 /* YYWRPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYWRPainter.m; sourceTree = "<group>"; };
+		40D7107024323D5900D5D1C9 /* YYBOLLPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYBOLLPainter.h; sourceTree = "<group>"; };
+		40D7107124323D5900D5D1C9 /* YYBOLLPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBOLLPainter.m; sourceTree = "<group>"; };
+		40D7107324323D6300D5D1C9 /* YYEMAPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYEMAPainter.h; sourceTree = "<group>"; };
+		40D7107424323D6300D5D1C9 /* YYEMAPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYEMAPainter.m; sourceTree = "<group>"; };
+		40D710772432467300D5D1C9 /* YYTimelinePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTimelinePainter.h; sourceTree = "<group>"; };
+		40D710782432467300D5D1C9 /* YYTimelinePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTimelinePainter.m; sourceTree = "<group>"; };
+		40D7107A24324F5200D5D1C9 /* YYIndicatorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYIndicatorModel.h; sourceTree = "<group>"; };
+		40D7107B24324F5200D5D1C9 /* YYIndicatorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYIndicatorModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +165,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4025A21B242A66A60092B17F /* YYCandle */ = {
+			isa = PBXGroup;
+			children = (
+				40A9FAD02424DF5E006DF1DE /* YYCandlePainter.h */,
+				40A9FAD12424DF5E006DF1DE /* YYCandlePainter.m */,
+			);
+			path = YYCandle;
+			sourceTree = "<group>";
+		};
+		4025A21C242A66C40092B17F /* YYMA */ = {
+			isa = PBXGroup;
+			children = (
+				40B221EF242A4DF60083EB7D /* YYMAPainter.h */,
+				40B221F0242A4DF60083EB7D /* YYMAPainter.m */,
+			);
+			path = YYMA;
+			sourceTree = "<group>";
+		};
+		4025A21D242A66CC0092B17F /* YYVol */ = {
+			isa = PBXGroup;
+			children = (
+				4025A218242A59630092B17F /* YYVolPainter.h */,
+				4025A219242A59630092B17F /* YYVolPainter.m */,
+			);
+			path = YYVol;
+			sourceTree = "<group>";
+		};
+		4025A21E242A66D40092B17F /* YYMACD */ = {
+			isa = PBXGroup;
+			children = (
+				4025A21F242A67270092B17F /* YYMACDPainter.h */,
+				4025A220242A67270092B17F /* YYMACDPainter.m */,
+			);
+			path = YYMACD;
+			sourceTree = "<group>";
+		};
+		4025A222242B2FD30092B17F /* YYKDJ */ = {
+			isa = PBXGroup;
+			children = (
+				4025A223242B2FE10092B17F /* YYKDJPainter.h */,
+				4025A224242B2FE10092B17F /* YYKDJPainter.m */,
+			);
+			path = YYKDJ;
+			sourceTree = "<group>";
+		};
+		4025A226242B32440092B17F /* YYVerticalText */ = {
+			isa = PBXGroup;
+			children = (
+				4025A227242B326C0092B17F /* YYVerticalTextPainter.h */,
+				4025A228242B326C0092B17F /* YYVerticalTextPainter.m */,
+			);
+			path = YYVerticalText;
+			sourceTree = "<group>";
+		};
+		40A9FACF2424DF2B006DF1DE /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				40D710762432465800D5D1C9 /* YYTimeline */,
+				40D7106F24323D2500D5D1C9 /* YYEMA */,
+				40D7106E24323D1D00D5D1C9 /* YYBOLL */,
+				40D7106424323A9300D5D1C9 /* YYWR */,
+				40D7106324323A8600D5D1C9 /* YYRSI */,
+				40C5418F242B5A0800F5370A /* YYTime */,
+				4025A226242B32440092B17F /* YYVerticalText */,
+				4025A222242B2FD30092B17F /* YYKDJ */,
+				4025A21E242A66D40092B17F /* YYMACD */,
+				4025A21D242A66CC0092B17F /* YYVol */,
+				4025A21C242A66C40092B17F /* YYMA */,
+				4025A21B242A66A60092B17F /* YYCandle */,
+				40A9FAD32424DF74006DF1DE /* YYPainter.h */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
 		40B7E5DE2422231700F1F180 = {
 			isa = PBXGroup;
 			children = (
@@ -211,16 +258,19 @@
 		40B7E5E92422231700F1F180 /* Y_Kline */ = {
 			isa = PBXGroup;
 			children = (
+				4053FFCE242CE4AC00683423 /* Y_Kline.entitlements */,
 				40B7E5EA2422231700F1F180 /* AppDelegate.h */,
 				40B7E5EB2422231700F1F180 /* AppDelegate.m */,
-				40B7E5ED2422231700F1F180 /* SceneDelegate.h */,
-				40B7E5EE2422231700F1F180 /* SceneDelegate.m */,
 				40B7E5F02422231700F1F180 /* ViewController.h */,
 				40B7E5F12422231700F1F180 /* ViewController.m */,
-				40B7E6462422239C00F1F180 /* K线图 */,
+				40B7E6462422239C00F1F180 /* Y_Kline */,
 				40B7E6032422239C00F1F180 /* other */,
 				40B7E6832422239D00F1F180 /* Y_StockChartViewController.h */,
 				40B7E6822422239D00F1F180 /* Y_StockChartViewController.m */,
+				40B7E6812422239D00F1F180 /* Y_StockChartSegmentView.h */,
+				40B7E6802422239D00F1F180 /* Y_StockChartSegmentView.m */,
+				40B7E6472422239C00F1F180 /* Y_StockChartView.h */,
+				40B7E6512422239C00F1F180 /* Y_StockChartView.m */,
 				40B7E5F32422231700F1F180 /* Main.storyboard */,
 				40B7E5F62422231C00F1F180 /* Assets.xcassets */,
 				40B7E5F82422231C00F1F180 /* LaunchScreen.storyboard */,
@@ -243,8 +293,8 @@
 		40B7E6042422239C00F1F180 /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6052422239C00F1F180 /* NetWorking.m */,
 				40B7E6062422239C00F1F180 /* NetWorking.h */,
+				40B7E6052422239C00F1F180 /* NetWorking.m */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -284,37 +334,9 @@
 		40B7E6222422239C00F1F180 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6232422239C00F1F180 /* UIKit+AFNetworking */,
 				40B7E6382422239C00F1F180 /* AFNetworking */,
 			);
 			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		40B7E6232422239C00F1F180 /* UIKit+AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E6242422239C00F1F180 /* UIProgressView+AFNetworking.m */,
-				40B7E6252422239C00F1F180 /* UIButton+AFNetworking.h */,
-				40B7E6262422239C00F1F180 /* UIRefreshControl+AFNetworking.m */,
-				40B7E6272422239C00F1F180 /* UIImageView+AFNetworking.h */,
-				40B7E6282422239C00F1F180 /* AFImageDownloader.h */,
-				40B7E6292422239C00F1F180 /* AFNetworkActivityIndicatorManager.m */,
-				40B7E62A2422239C00F1F180 /* AFAutoPurgingImageCache.h */,
-				40B7E62B2422239C00F1F180 /* UIWebView+AFNetworking.h */,
-				40B7E62C2422239C00F1F180 /* UIActivityIndicatorView+AFNetworking.h */,
-				40B7E62D2422239C00F1F180 /* UIImage+AFNetworking.h */,
-				40B7E62E2422239C00F1F180 /* UIProgressView+AFNetworking.h */,
-				40B7E62F2422239C00F1F180 /* UIImageView+AFNetworking.m */,
-				40B7E6302422239C00F1F180 /* UIKit+AFNetworking.h */,
-				40B7E6312422239C00F1F180 /* UIRefreshControl+AFNetworking.h */,
-				40B7E6322422239C00F1F180 /* UIButton+AFNetworking.m */,
-				40B7E6332422239C00F1F180 /* UIActivityIndicatorView+AFNetworking.m */,
-				40B7E6342422239C00F1F180 /* UIWebView+AFNetworking.m */,
-				40B7E6352422239C00F1F180 /* AFAutoPurgingImageCache.m */,
-				40B7E6362422239C00F1F180 /* AFNetworkActivityIndicatorManager.h */,
-				40B7E6372422239C00F1F180 /* AFImageDownloader.m */,
-			);
-			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
 		40B7E6382422239C00F1F180 /* AFNetworking */ = {
@@ -337,34 +359,35 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		40B7E6462422239C00F1F180 /* K线图 */ = {
+		40B7E6462422239C00F1F180 /* Y_Kline */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6472422239C00F1F180 /* Y_StockChartView.h */,
 				40B7E6482422239C00F1F180 /* Config */,
-				40B7E6512422239C00F1F180 /* Y_StockChartView.m */,
-				40B7E6522422239C00F1F180 /* KLine */,
+				40A9FACF2424DF2B006DF1DE /* Painter */,
+				40B7E6B82422682900F1F180 /* Model */,
+				40B7E6702422239C00F1F180 /* Y_KLineView.h */,
+				40B7E6562422239C00F1F180 /* Y_KLineView.m */,
 			);
-			path = "K线图";
+			path = Y_Kline;
 			sourceTree = "<group>";
 		};
 		40B7E6482422239C00F1F180 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6492422239C00F1F180 /* GlobalVariable */,
+				40B7E6492422239C00F1F180 /* Variable */,
 				40B7E64C2422239C00F1F180 /* Constant */,
 				40B7E64E2422239C00F1F180 /* Theme */,
 			);
 			path = Config;
 			sourceTree = "<group>";
 		};
-		40B7E6492422239C00F1F180 /* GlobalVariable */ = {
+		40B7E6492422239C00F1F180 /* Variable */ = {
 			isa = PBXGroup;
 			children = (
 				40B7E64A2422239C00F1F180 /* Y_StockChartGlobalVariable.h */,
 				40B7E64B2422239C00F1F180 /* Y_StockChartGlobalVariable.m */,
 			);
-			path = GlobalVariable;
+			path = Variable;
 			sourceTree = "<group>";
 		};
 		40B7E64C2422239C00F1F180 /* Constant */ = {
@@ -384,149 +407,73 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
-		40B7E6522422239C00F1F180 /* KLine */ = {
+		40B7E6B82422682900F1F180 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6532422239C00F1F180 /* KLine_MAView */,
-				40B7E6562422239C00F1F180 /* Y_KLineView.m */,
-				40B7E6572422239C00F1F180 /* PriceView */,
-				40B7E65A2422239C00F1F180 /* Volume_MAView */,
-				40B7E65D2422239C00F1F180 /* AccessoryView */,
-				40B7E6632422239C00F1F180 /* Accessory_MAView */,
-				40B7E6662422239C00F1F180 /* Model */,
-				40B7E6702422239C00F1F180 /* Y_KLineView.h */,
-				40B7E6712422239C00F1F180 /* VolumeView */,
-				40B7E6772422239C00F1F180 /* MainKLineView */,
-				40B7E67F2422239D00F1F180 /* SegmentView */,
-			);
-			path = KLine;
-			sourceTree = "<group>";
-		};
-		40B7E6532422239C00F1F180 /* KLine_MAView */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E6542422239C00F1F180 /* Y_KLineMAView.h */,
-				40B7E6552422239C00F1F180 /* Y_KLineMAView.m */,
-			);
-			path = KLine_MAView;
-			sourceTree = "<group>";
-		};
-		40B7E6572422239C00F1F180 /* PriceView */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E6582422239C00F1F180 /* Y_StockChartRightYView.m */,
-				40B7E6592422239C00F1F180 /* Y_StockChartRightYView.h */,
-			);
-			path = PriceView;
-			sourceTree = "<group>";
-		};
-		40B7E65A2422239C00F1F180 /* Volume_MAView */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E65B2422239C00F1F180 /* Y_VolumeMAView.h */,
-				40B7E65C2422239C00F1F180 /* Y_VolumeMAView.m */,
-			);
-			path = Volume_MAView;
-			sourceTree = "<group>";
-		};
-		40B7E65D2422239C00F1F180 /* AccessoryView */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E65E2422239C00F1F180 /* Y_KLineAccessoryView.m */,
-				40B7E65F2422239C00F1F180 /* Line */,
-				40B7E6622422239C00F1F180 /* Y_KLineAccessoryView.h */,
-			);
-			path = AccessoryView;
-			sourceTree = "<group>";
-		};
-		40B7E65F2422239C00F1F180 /* Line */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E6602422239C00F1F180 /* Y_KLineAccessory.h */,
-				40B7E6612422239C00F1F180 /* Y_KLineAccessory.m */,
-			);
-			path = Line;
-			sourceTree = "<group>";
-		};
-		40B7E6632422239C00F1F180 /* Accessory_MAView */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E6642422239C00F1F180 /* Y_AccessoryMAView.m */,
-				40B7E6652422239C00F1F180 /* Y_AccessoryMAView.h */,
-			);
-			path = Accessory_MAView;
-			sourceTree = "<group>";
-		};
-		40B7E6662422239C00F1F180 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				40B7E6672422239C00F1F180 /* KLineModel */,
+				40D7107A24324F5200D5D1C9 /* YYIndicatorModel.h */,
+				40D7107B24324F5200D5D1C9 /* YYIndicatorModel.m */,
+				40B7E6BB24226A1D00F1F180 /* YYKlineModel.h */,
+				40B7E6BC24226A1D00F1F180 /* YYKlineModel.m */,
+				40B221EC2428FB9F0083EB7D /* YYMinMaxModel.h */,
+				40B221ED2428FB9F0083EB7D /* YYMinMaxModel.m */,
+				40B7E66A2422239C00F1F180 /* Y_KLineRootModel.h */,
+				40B7E66E2422239C00F1F180 /* Y_KLineRootModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		40B7E6672422239C00F1F180 /* KLineModel */ = {
+		40C5418F242B5A0800F5370A /* YYTime */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6682422239C00F1F180 /* Y_KLinePositionModel.m */,
-				40B7E6692422239C00F1F180 /* Y_KLineModel.h */,
-				40B7E66A2422239C00F1F180 /* Y_KLineGroupModel.h */,
-				40B7E66B2422239C00F1F180 /* Y_KLineVolumePositionModel.h */,
-				40B7E66C2422239C00F1F180 /* Y_KLinePositionModel.h */,
-				40B7E66D2422239C00F1F180 /* Y_KLineModel.m */,
-				40B7E66E2422239C00F1F180 /* Y_KLineGroupModel.m */,
-				40B7E66F2422239C00F1F180 /* Y_KLineVolumePositionModel.m */,
+				40C54190242B5A2900F5370A /* YYTimePainter.h */,
+				40C54191242B5A2900F5370A /* YYTimePainter.m */,
 			);
-			path = KLineModel;
+			path = YYTime;
 			sourceTree = "<group>";
 		};
-		40B7E6712422239C00F1F180 /* VolumeView */ = {
+		40D7106324323A8600D5D1C9 /* YYRSI */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6722422239C00F1F180 /* Y_KLineVolumeView.m */,
-				40B7E6732422239C00F1F180 /* Line */,
-				40B7E6762422239C00F1F180 /* Y_KLineVolumeView.h */,
+				40D7106824323AC000D5D1C9 /* YYRSIPainter.h */,
+				40D7106924323AC000D5D1C9 /* YYRSIPainter.m */,
 			);
-			path = VolumeView;
+			path = YYRSI;
 			sourceTree = "<group>";
 		};
-		40B7E6732422239C00F1F180 /* Line */ = {
+		40D7106424323A9300D5D1C9 /* YYWR */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6742422239C00F1F180 /* Y_KLineVolume.m */,
-				40B7E6752422239C00F1F180 /* Y_KLineVolume.h */,
+				40D7106B24323AC900D5D1C9 /* YYWRPainter.h */,
+				40D7106C24323AC900D5D1C9 /* YYWRPainter.m */,
 			);
-			path = Line;
+			path = YYWR;
 			sourceTree = "<group>";
 		};
-		40B7E6772422239C00F1F180 /* MainKLineView */ = {
+		40D7106E24323D1D00D5D1C9 /* YYBOLL */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6782422239C00F1F180 /* Y_KLineMainView.m */,
-				40B7E6792422239C00F1F180 /* Line */,
-				40B7E67E2422239C00F1F180 /* Y_KLineMainView.h */,
+				40D7107024323D5900D5D1C9 /* YYBOLLPainter.h */,
+				40D7107124323D5900D5D1C9 /* YYBOLLPainter.m */,
 			);
-			path = MainKLineView;
+			path = YYBOLL;
 			sourceTree = "<group>";
 		};
-		40B7E6792422239C00F1F180 /* Line */ = {
+		40D7106F24323D2500D5D1C9 /* YYEMA */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E67A2422239C00F1F180 /* Y_MALine.h */,
-				40B7E67B2422239C00F1F180 /* Y_KLine.h */,
-				40B7E67C2422239C00F1F180 /* Y_MALine.m */,
-				40B7E67D2422239C00F1F180 /* Y_KLine.m */,
+				40D7107324323D6300D5D1C9 /* YYEMAPainter.h */,
+				40D7107424323D6300D5D1C9 /* YYEMAPainter.m */,
 			);
-			path = Line;
+			path = YYEMA;
 			sourceTree = "<group>";
 		};
-		40B7E67F2422239D00F1F180 /* SegmentView */ = {
+		40D710762432465800D5D1C9 /* YYTimeline */ = {
 			isa = PBXGroup;
 			children = (
-				40B7E6802422239D00F1F180 /* Y_StockChartSegmentView.m */,
-				40B7E6812422239D00F1F180 /* Y_StockChartSegmentView.h */,
+				40D710772432467300D5D1C9 /* YYTimelinePainter.h */,
+				40D710782432467300D5D1C9 /* YYTimelinePainter.m */,
 			);
-			path = SegmentView;
+			path = YYTimeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -599,56 +546,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B7E6902422239D00F1F180 /* UIProgressView+AFNetworking.m in Sources */,
-				40B7E6AB2422239D00F1F180 /* Y_KLineGroupModel.m in Sources */,
+				4025A221242A67270092B17F /* YYMACDPainter.m in Sources */,
+				40B7E6AB2422239D00F1F180 /* Y_KLineRootModel.m in Sources */,
 				40B7E5F22422231700F1F180 /* ViewController.m in Sources */,
 				40B7E5EC2422231700F1F180 /* AppDelegate.m in Sources */,
-				40B7E6AC2422239D00F1F180 /* Y_KLineVolumePositionModel.m in Sources */,
-				40B7E6A52422239D00F1F180 /* Y_VolumeMAView.m in Sources */,
 				40B7E6892422239D00F1F180 /* MASLayoutConstraint.m in Sources */,
 				40B7E5FD2422231C00F1F180 /* main.m in Sources */,
 				40B7E6842422239D00F1F180 /* NetWorking.m in Sources */,
-				40B7E6A22422239D00F1F180 /* Y_KLineMAView.m in Sources */,
-				40B7E6952422239D00F1F180 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				40A9FAD22424DF5E006DF1DE /* YYCandlePainter.m in Sources */,
 				40B7E6A02422239D00F1F180 /* UIColor+Y_StockChart.m in Sources */,
-				40B7E6B12422239D00F1F180 /* Y_KLine.m in Sources */,
-				40B7E6972422239D00F1F180 /* AFAutoPurgingImageCache.m in Sources */,
+				4025A21A242A59630092B17F /* YYVolPainter.m in Sources */,
 				40B7E6B22422239D00F1F180 /* Y_StockChartSegmentView.m in Sources */,
-				40B7E6A82422239D00F1F180 /* Y_AccessoryMAView.m in Sources */,
-				40B7E6942422239D00F1F180 /* UIButton+AFNetworking.m in Sources */,
+				40B221F1242A4DF60083EB7D /* YYMAPainter.m in Sources */,
+				40C54192242B5A2900F5370A /* YYTimePainter.m in Sources */,
 				40B7E68E2422239D00F1F180 /* MASViewAttribute.m in Sources */,
-				40B7E6AF2422239D00F1F180 /* Y_KLineMainView.m in Sources */,
-				40B7E6AD2422239D00F1F180 /* Y_KLineVolumeView.m in Sources */,
-				40B7E6912422239D00F1F180 /* UIRefreshControl+AFNetworking.m in Sources */,
+				40B7E6BD24226A1D00F1F180 /* YYKlineModel.m in Sources */,
+				40D7107524323D6300D5D1C9 /* YYEMAPainter.m in Sources */,
 				40B7E6B32422239D00F1F180 /* Y_StockChartViewController.m in Sources */,
-				40B7E6922422239D00F1F180 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				40B7E6A32422239D00F1F180 /* Y_KLineView.m in Sources */,
-				40B7E6932422239D00F1F180 /* UIImageView+AFNetworking.m in Sources */,
 				40B7E68A2422239D00F1F180 /* NSArray+MASAdditions.m in Sources */,
 				40B7E6992422239D00F1F180 /* AFURLResponseSerialization.m in Sources */,
+				40B221EE2428FB9F0083EB7D /* YYMinMaxModel.m in Sources */,
 				40B7E6872422239D00F1F180 /* MASCompositeConstraint.m in Sources */,
 				40B7E69E2422239D00F1F180 /* AFSecurityPolicy.m in Sources */,
+				4025A225242B2FE10092B17F /* YYKDJPainter.m in Sources */,
 				40B7E6882422239D00F1F180 /* MASConstraintMaker.m in Sources */,
 				40B7E68B2422239D00F1F180 /* View+MASAdditions.m in Sources */,
-				40B7E6AE2422239D00F1F180 /* Y_KLineVolume.m in Sources */,
 				40B7E69D2422239D00F1F180 /* AFNetworkReachabilityManager.m in Sources */,
 				40B7E6A12422239D00F1F180 /* Y_StockChartView.m in Sources */,
 				40B7E69B2422239D00F1F180 /* AFURLSessionManager.m in Sources */,
 				40B7E69C2422239D00F1F180 /* AFURLRequestSerialization.m in Sources */,
-				40B7E6962422239D00F1F180 /* UIWebView+AFNetworking.m in Sources */,
-				40B7E6A92422239D00F1F180 /* Y_KLinePositionModel.m in Sources */,
-				40B7E6B02422239D00F1F180 /* Y_MALine.m in Sources */,
-				40B7E6A42422239D00F1F180 /* Y_StockChartRightYView.m in Sources */,
-				40B7E6AA2422239D00F1F180 /* Y_KLineModel.m in Sources */,
+				40D7106D24323AC900D5D1C9 /* YYWRPainter.m in Sources */,
 				40B7E6862422239D00F1F180 /* ViewController+MASAdditions.m in Sources */,
-				40B7E5EF2422231700F1F180 /* SceneDelegate.m in Sources */,
-				40B7E6A62422239D00F1F180 /* Y_KLineAccessoryView.m in Sources */,
+				40D710792432467300D5D1C9 /* YYTimelinePainter.m in Sources */,
+				4025A229242B326C0092B17F /* YYVerticalTextPainter.m in Sources */,
+				40D7107C24324F5200D5D1C9 /* YYIndicatorModel.m in Sources */,
+				40D7106A24323AC000D5D1C9 /* YYRSIPainter.m in Sources */,
 				40B7E68D2422239D00F1F180 /* MASViewConstraint.m in Sources */,
-				40B7E6A72422239D00F1F180 /* Y_KLineAccessory.m in Sources */,
 				40B7E6852422239D00F1F180 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				40D7107224323D5900D5D1C9 /* YYBOLLPainter.m in Sources */,
 				40B7E68C2422239D00F1F180 /* MASConstraint.m in Sources */,
 				40B7E69F2422239D00F1F180 /* Y_StockChartGlobalVariable.m in Sources */,
-				40B7E6982422239D00F1F180 /* AFImageDownloader.m in Sources */,
 				40B7E69A2422239D00F1F180 /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -789,15 +727,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Y_Kline/Y_Kline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = N3VC6N6JE3;
 				INFOPLIST_FILE = Y_Kline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.willkyang.Y-Kline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -806,15 +750,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Y_Kline/Y_Kline.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = N3VC6N6JE3;
 				INFOPLIST_FILE = Y_Kline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.willkyang.Y-Kline";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

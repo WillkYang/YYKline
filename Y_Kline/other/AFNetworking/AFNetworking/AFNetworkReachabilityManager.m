@@ -142,8 +142,7 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
     return manager;
 }
 
-+ (instancetype)manager
-{
++ (instancetype)manager {
 #if (defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && __IPHONE_OS_VERSION_MIN_REQUIRED >= 90000) || (defined(__MAC_OS_X_VERSION_MIN_REQUIRED) && __MAC_OS_X_VERSION_MIN_REQUIRED >= 101100)
     struct sockaddr_in6 address;
     bzero(&address, sizeof(address));
@@ -170,8 +169,7 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
     return self;
 }
 
-- (instancetype)init NS_UNAVAILABLE
-{
+- (instancetype)init NS_UNAVAILABLE {
     return nil;
 }
 
