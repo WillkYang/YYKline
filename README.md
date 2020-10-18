@@ -1,4 +1,4 @@
-## Y_KLine
+## YYKline
 
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)]() &nbsp;
@@ -6,9 +6,9 @@
 [![Support](https://img.shields.io/badge/support-Autolayout-orange.svg?style=flatt)]() &nbsp;
 
 ## 介绍
-- [x] OC开发，如需Swift可直接翻译
 - [x] 支持MA、EMA、BOLL、KDJ、MACD、RSI、WR等技术指标，支持更多指标扩展
 - [x] 支持运行于iOS、MacOS上
+- [x] OC开发，如需Swift可直接翻译
 
 ## 图表示例
 
