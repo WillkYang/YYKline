@@ -1,0 +1,6 @@
+framework module Pods_YYKline {
+  umbrella header "Pods-YYKline-umbrella.h"
+
+  export *
+  module * { export * }
+}
