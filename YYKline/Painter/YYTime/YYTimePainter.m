@@ -11,7 +11,7 @@
 
 @implementation YYTimePainter
 
-+ (void)drawToLayer:(CALayer *)layer area:(CGRect)area models:(NSArray <YYKlineModel *> *)models {
++ (void)drawToLayer:(CALayer *)layer area:(CGRect)area models:(NSArray<YYKlineModel *> *)models minMax:(YYMinMaxModel *)minMaxModel {
     CGFloat maxH = CGRectGetHeight(area);
     if (maxH <= 0) {
         return;
@@ -39,4 +39,5 @@
         [sublayer addSublayer:textLayer];
     }];
 }
+
 @end

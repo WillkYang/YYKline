@@ -10,7 +10,19 @@
 #import "UIColor+YYKline.h"
 #import "YYKlineGlobalVariable.h"
 #import "YYKlineRootModel.h"
-#import "YYPainter.h"
+#import "YYPainterProtocol.h"
+//#import "YYCandlePainter.h"
+#import "YYMAPainter.h"
+#import "YYVolPainter.h"
+#import "YYMACDPainter.h"
+//#import "YYKDJPainter.h"
+#import "YYVerticalTextPainter.h"
+#import "YYTimePainter.h"
+//#import "YYWRPainter.h"
+//#import "YYRSIPainter.h"
+//#import "YYEMAPainter.h"
+//#import "YYBOLLPainter.h"
+#import "YYTimelinePainter.h"
 
 @interface YYKlineView() <UIScrollViewDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -33,7 +45,6 @@
 @end
 
 @implementation YYKlineView
-
 
 static void dispatch_main_async_safe(dispatch_block_t block) {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -214,7 +225,7 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
     CGRect thirdArea = CGRectMake(offsetX, CGRectGetMaxY(secondArea) + 20, CGRectGetWidth(mainArea), CGRectGetHeight(self.painterView.bounds) * (1 - self.mainViewRatio - self.volumeViewRatio) - 20);
     
     // 时间轴
-    [YYTimePainter drawToLayer:self.painterView.layer area:CGRectMake(offsetX, CGRectGetMaxY(mainArea), CGRectGetWidth(mainArea)+20, 20) models:models];
+    [YYTimePainter drawToLayer:self.painterView.layer area:CGRectMake(offsetX, CGRectGetMaxY(mainArea), CGRectGetWidth(mainArea)+20, 20) models:models minMax:minMax];
     // 右侧价格轴
     [YYVerticalTextPainter drawToLayer: self.rightView.layer area: CGRectMake(0, 20, YYKlineLinePriceViewWidth, CGRectGetHeight(mainArea)) minMax:minMax];
     // 右侧成交量轴

@@ -22,7 +22,7 @@
 #import "YYKDJPainter.h"
 #import "YYMAPainter.h"
 #import "YYMACDPainter.h"
-#import "YYPainter.h"
+#import "YYPainterProtocol.h"
 #import "YYRSIPainter.h"
 #import "YYTimePainter.h"
 #import "YYTimelinePainter.h"

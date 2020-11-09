@@ -9,7 +9,8 @@
 #import "YYKlineConstant.h"
 #import "YYKlineModel.h"
 #import "YYKlineRootModel.h"
-#import "YYPainter.h"
+#import "YYPainterProtocol.h"
+
 @interface YYKlineView : UIView
 
 @property(nonatomic, strong) YYKlineRootModel *rootModel; // 数据

@@ -76,7 +76,7 @@
 		4081AD7A254866D80039DE0F /* YYKDJPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKDJPainter.m; sourceTree = "<group>"; };
 		4081AD7C254866D80039DE0F /* YYMACDPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMACDPainter.h; sourceTree = "<group>"; };
 		4081AD7D254866D80039DE0F /* YYMACDPainter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMACDPainter.m; sourceTree = "<group>"; };
-		4081AD7E254866D80039DE0F /* YYPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPainter.h; sourceTree = "<group>"; };
+		4081AD7E254866D80039DE0F /* YYPainterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPainterProtocol.h; sourceTree = "<group>"; };
 		4081AD7F254866D80039DE0F /* YYKlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKlineView.h; sourceTree = "<group>"; };
 		4081AD82254866D80039DE0F /* YYKlineGlobalVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKlineGlobalVariable.m; sourceTree = "<group>"; };
 		4081AD83254866D80039DE0F /* YYKlineGlobalVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKlineGlobalVariable.h; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				4081AD75254866D80039DE0F /* YYWR */,
 				4081AD78254866D80039DE0F /* YYKDJ */,
 				4081AD7B254866D80039DE0F /* YYMACD */,
-				4081AD7E254866D80039DE0F /* YYPainter.h */,
+				4081AD7E254866D80039DE0F /* YYPainterProtocol.h */,
 			);
 			path = Painter;
 			sourceTree = "<group>";
@@ -185,8 +185,8 @@
 		4081AD5D254866D80039DE0F /* YYBOLL */ = {
 			isa = PBXGroup;
 			children = (
-				4081AD5E254866D80039DE0F /* YYBOLLPainter.m */,
 				4081AD5F254866D80039DE0F /* YYBOLLPainter.h */,
+				4081AD5E254866D80039DE0F /* YYBOLLPainter.m */,
 			);
 			path = YYBOLL;
 			sourceTree = "<group>";
@@ -203,8 +203,8 @@
 		4081AD63254866D80039DE0F /* YYMA */ = {
 			isa = PBXGroup;
 			children = (
-				4081AD64254866D80039DE0F /* YYMAPainter.m */,
 				4081AD65254866D80039DE0F /* YYMAPainter.h */,
+				4081AD64254866D80039DE0F /* YYMAPainter.m */,
 			);
 			path = YYMA;
 			sourceTree = "<group>";
@@ -212,8 +212,8 @@
 		4081AD66254866D80039DE0F /* YYTime */ = {
 			isa = PBXGroup;
 			children = (
-				4081AD67254866D80039DE0F /* YYTimePainter.m */,
 				4081AD68254866D80039DE0F /* YYTimePainter.h */,
+				4081AD67254866D80039DE0F /* YYTimePainter.m */,
 			);
 			path = YYTime;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 		4081AD6F254866D80039DE0F /* YYVerticalText */ = {
 			isa = PBXGroup;
 			children = (
-				4081AD70254866D80039DE0F /* YYVerticalTextPainter.m */,
 				4081AD71254866D80039DE0F /* YYVerticalTextPainter.h */,
+				4081AD70254866D80039DE0F /* YYVerticalTextPainter.m */,
 			);
 			path = YYVerticalText;
 			sourceTree = "<group>";
@@ -248,8 +248,8 @@
 		4081AD72254866D80039DE0F /* YYVol */ = {
 			isa = PBXGroup;
 			children = (
-				4081AD73254866D80039DE0F /* YYVolPainter.m */,
 				4081AD74254866D80039DE0F /* YYVolPainter.h */,
+				4081AD73254866D80039DE0F /* YYVolPainter.m */,
 			);
 			path = YYVol;
 			sourceTree = "<group>";

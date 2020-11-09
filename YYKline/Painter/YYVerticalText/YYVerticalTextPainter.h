@@ -6,13 +6,11 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "YYMinMaxModel.h"
-#import "YYKlineModel.h"
+#import "YYPainterProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YYVerticalTextPainter : CALayer
-+ (void)drawToLayer:(CALayer *)layer area:(CGRect)area minMax: (YYMinMaxModel *)minMaxModel;
+@interface YYVerticalTextPainter : CALayer <YYVerticalTextPainterProtocol>
 @end
 
 NS_ASSUME_NONNULL_END
