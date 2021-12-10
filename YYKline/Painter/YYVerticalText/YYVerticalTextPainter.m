@@ -23,6 +23,10 @@
     // 数字40只是一个magic数字，没啥特殊意义
     NSInteger count = maxH/40;
     count++;
+    if (count == 1) {
+        
+        return;
+    }
     CGFloat lineH = [UIFont systemFontOfSize:12.f].lineHeight;
     CGFloat textGap = (maxH - lineH)/(count-1);
     CGFloat decimalGap = minMaxModel.distance / (count-1);
